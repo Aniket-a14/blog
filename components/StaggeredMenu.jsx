@@ -326,7 +326,7 @@ export const StaggeredMenu = ({
         data-open={open || undefined}>
         <div
           ref={preLayersRef}
-          className="sm-prelayers absolute top-0 right-0 bottom-0 pointer-events-none z-[5]"
+          className="sm-prelayers absolute top-0 right-0 bottom-0 pointer-events-none z-5"
           aria-hidden="true">
           {(() => {
             const raw = colors && colors.length ? colors.slice(0, 4) : ['#1e1e22', '#35353c'];
@@ -369,7 +369,7 @@ export const StaggeredMenu = ({
             type="button">
             <span
               ref={textWrapRef}
-              className="sm-toggle-textWrap relative inline-block h-[1em] overflow-hidden whitespace-nowrap w-[var(--sm-toggle-width,auto)] min-w-[var(--sm-toggle-width,auto)]"
+              className="sm-toggle-textWrap relative inline-block h-[1em] overflow-hidden whitespace-nowrap w-(--sm-toggle-width,auto) min-w-(--sm-toggle-width,auto)"
               aria-hidden="true">
               <span
                 ref={textInnerRef}
@@ -384,14 +384,14 @@ export const StaggeredMenu = ({
 
             <span
               ref={iconRef}
-              className="sm-icon relative w-[14px] h-[14px] shrink-0 inline-flex items-center justify-center [will-change:transform]"
+              className="sm-icon relative w-[14px] h-[14px] shrink-0 inline-flex items-center justify-center will-change:transform"
               aria-hidden="true">
               <span
                 ref={plusHRef}
-                className="sm-icon-line absolute left-1/2 top-1/2 w-full h-[2px] bg-current rounded-[2px] -translate-x-1/2 -translate-y-1/2 [will-change:transform]" />
+                className="sm-icon-line absolute left-1/2 top-1/2 w-full h-[2px] bg-current rounded-[2px] -translate-x-1/2 -translate-y-1/2 will-change:transform" />
               <span
                 ref={plusVRef}
-                className="sm-icon-line sm-icon-line-v absolute left-1/2 top-1/2 w-full h-[2px] bg-current rounded-[2px] -translate-x-1/2 -translate-y-1/2 [will-change:transform]" />
+                className="sm-icon-line sm-icon-line-v absolute left-1/2 top-1/2 w-full h-[2px] bg-current rounded-[2px] -translate-x-1/2 -translate-y-1/2 will-change:transform" />
             </span>
           </button>
         </header>
@@ -399,7 +399,7 @@ export const StaggeredMenu = ({
         <aside
           id="staggered-menu-panel"
           ref={panelRef}
-          className="staggered-menu-panel absolute top-0 right-0 h-full bg-white flex flex-col p-[6em_2em_2em_2em] overflow-y-auto z-10 backdrop-blur-[12px]"
+          className="staggered-menu-panel absolute top-0 right-0 h-full bg-white flex flex-col p-[6em_2em_2em_2em] overflow-y-auto z-10 backdrop-blur-md"
           style={{ WebkitBackdropFilter: 'blur(12px)' }}
           aria-hidden={!open}>
           <div className="sm-panel-inner flex-1 flex flex-col gap-5">
@@ -418,7 +418,7 @@ export const StaggeredMenu = ({
                       aria-label={it.ariaLabel}
                       data-index={idx + 1}>
                       <span
-                        className="sm-panel-itemLabel inline-block [transform-origin:50%_100%] will-change-transform">
+                        className="sm-panel-itemLabel inline-block origin-[50%_100%] will-change-transform">
                         {it.label}
                       </span>
                     </a>
@@ -431,7 +431,7 @@ export const StaggeredMenu = ({
                   <span
                     className="sm-panel-item relative text-black font-semibold text-[4rem] cursor-pointer leading-none tracking-[-2px] uppercase transition-[background,color] duration-150 ease-linear inline-block no-underline pr-[1.4em]">
                     <span
-                      className="sm-panel-itemLabel inline-block [transform-origin:50%_100%] will-change-transform">
+                      className="sm-panel-itemLabel inline-block origin-[50%_100%] will-change-transform">
                       No items
                     </span>
                   </span>
@@ -444,7 +444,7 @@ export const StaggeredMenu = ({
                 className="sm-socials mt-auto pt-8 flex flex-col gap-3"
                 aria-label="Social links">
                 <h3
-                  className="sm-socials-title m-0 text-base font-medium [color:var(--sm-accent,#ff0000)]">Socials</h3>
+                  className="sm-socials-title m-0 text-base font-medium text-(--sm-accent,#ff0000)">Socials</h3>
                 <ul
                   className="sm-socials-list list-none m-0 p-0 flex flex-row items-center gap-4 flex-wrap"
                   role="list">
